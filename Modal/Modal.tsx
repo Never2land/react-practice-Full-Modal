@@ -2,7 +2,7 @@ import * as React from 'react';
 import styles from './Modal.module.css';
 import { motion } from 'framer-motion';
 
-export default function Modal({ onClose }) {
+export default function Modal({ onClose, num }) {
   // Write your code here
   const handleClick = () => {
     onClose && onClose();
@@ -39,7 +39,7 @@ export default function Modal({ onClose }) {
       >
         <h1 className={styles.text}>Create this Modal</h1>
         <button className="button" onClick={onClose}>
-          Close
+          Close <p>{num}</p>
         </button>
       </motion.div>
     </div>
